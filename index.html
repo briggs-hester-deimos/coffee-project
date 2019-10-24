@@ -3,32 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+<!--    Bootstrap CSS link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    end Bootstrap CSS link -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div class="container">
 
+<!--Jumbrotron/header-->
+<div class="jumbotron jumbotron-fluid header">
+    <div class="container">
+        <h1 class="display-4 ">Coffee</h1>
+    </div>
+</div>
+</div>
+
+<!--Jumbotron/header-->
+
+
+<!--    First Coffee Submission Box  -->
+<div class="container">
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Roast</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Coffee Name</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary submit-button">Submit</button>
     </form>
+<!--    end first coffee submission box-->
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <!--    Second Coffee Submission Box  -->
+    <form>
+        <p><h3>Add a Coffee</h3></p>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Roast</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary submit-button">Submit</button>
+    </form>
+</div>
+    <!--    end second coffee submission box-->
+<div class="container">
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Coffee</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Total: </h5>
+                <p class="card-text">Itemized purchased list</p>
+                <a href="#" class="btn btn-primary">Submit order</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
 
     <script src="main.js"></script>
+
+<!--    Bootstrap Links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--End Bootstrap Links -->
 </body>
 </html>
