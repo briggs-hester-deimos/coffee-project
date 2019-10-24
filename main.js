@@ -48,6 +48,16 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+for (var i = 0; i < coffees.length; i++) {
+    if (coffees[i].roast === "light"){
+        document.getElementsByClassName("light-coffees")
+    } else if (coffees[i].roast === "medium"){
+        console.log(coffees[i].name)
+    } else if (coffees[i].roast === "dark"){
+        console.log(coffees[i].name)
+    }
+}
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
