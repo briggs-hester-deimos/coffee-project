@@ -1,23 +1,66 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '';
+    html +=  coffee.name + " " ;
+    html += '<p class="card-text"><small class="text-muted">' + coffee.roast + '</small></p>';
 
     return html;
 }
 
-function renderCoffees(coffees) {
+function renderCoffeeLight(coffee) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
+    html +=  coffee.name + " " ;
+    html += '<p class="card-text"><small class="text-muted">' + coffee.roast + '</small></p>';
+if (coffee.roast === "light") {
+    return html;
+}
+}
+
+function renderCoffeeMedium(coffee) {
+    var html = '';
+    html +=  coffee.name + " " ;
+    html += '<p class="card-text"><small class="text-muted">' + coffee.roast + '</small></p>';
+    if (coffee.roast === "medium") {
+        return html;
+    }
+}
+
+function renderCoffees(coffees) {
+    var html = '<div class="card-columns-3">';
+    for(var i = 0; i < coffees.length; i++) {
+        html += '<div class="card text-center">' +
+            '<div class="card-body">' +
+            '<h5 class="card-title">' + renderCoffee(coffees[i]) + '</h5>'+
+            '</div>' +
+            '</div>'
     }
     return html;
 }
 
+function renderCoffeesLight(coffees) {
+    var html = '<div class="card-columns-3">';
+    for(var i = 0; i < coffees.length; i++) {
+        html += '<div class="card text-center">' +
+            '<div class="card-body">' +
+            '<h5 class="card-title">' + renderCoffeeLight(coffees[i]) + '</h5>'+
+            '</div>' +
+            '</div>'
+    }
+    return html;
+}
+
+function renderCoffeesMedium(coffees) {
+    var html = '<div class="card-columns-3">';
+    for(var i = 0; i < coffees.length; i++) {
+        html += '<div class="card text-center">' +
+            '<div class="card-body">' +
+            '<h5 class="card-title">' + renderCoffeeMedium(coffees[i]) + '</h5>'+
+            '</div>' +
+            '</div>'
+    }
+    return html;
+}
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -29,6 +72,22 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function chooseCoffee(){
+    var html = '<div class="card-columns-3">';
+    for(var i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toLowerCase().includes(coffeeName.value.toLowerCase())) {
+            html += '<div class="card text-center">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title">' + renderCoffee(coffees[i]) + '</h5>'+
+                '</div>' +
+                '</div>'
+        }
+        tbody.innerHTML = html;
+    }
+}
+document.getElementById("coffeeName").addEventListener("keyup", chooseCoffee);
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -48,20 +107,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-for (var i = 0; i < coffees.length; i++) {
-    if (coffees[i].roast === "light"){
-        document.getElementsByClassName("light-coffees")
-    } else if (coffees[i].roast === "medium"){
-        console.log(coffees[i].name)
-    } else if (coffees[i].roast === "dark"){
-        console.log(coffees[i].name)
-    }
-}
+
 
 var tbody = document.querySelector('#coffees');
+var lbody = document.querySelector('#coffees-light');
+var mbody = document.querySelector('#coffees-medium');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
+lbody.innerHTML = renderCoffeesLight(coffees);
+mbody.innerHTML = renderCoffeesMedium(coffees);
+
 
 submitButton.addEventListener('click', updateCoffees);
