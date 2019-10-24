@@ -1,7 +1,10 @@
 body {
-    display: grid;
+    background-image: url("img/coffeemenu.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
 }
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -18,9 +21,14 @@ td, th {
 
 .header {
     background-color: #ffeccf;
+    margin-top: 15%;
+    padding: 0;
     grid-area: 2 / 3 / 1 / 2;
 }
 
 .tab-content-all {
     margin-top: 20px;
+}
+.end{
+    margin-bottom: 20%;
 }
