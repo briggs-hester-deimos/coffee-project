@@ -67,6 +67,9 @@ td, th {
     height: 70%;
     /*right: 0%;*/
     /*bottom: 0;*/
+    box-shadow: 0 5px 5px black;
+    border-radius: 50%;
+
 }
 label{
     font-family: ‘Rancho’, cursive;
