@@ -50,7 +50,7 @@ td, th {
     border-radius: 10px;
 }
 .card-title{
-    /*font-weight: bold;*/
+    font-family: ‘Rancho’, cursive;
 
 }
 
@@ -58,6 +58,8 @@ td, th {
     color: black;
     font-weight: bold;
     text-decoration: none;
+    font-family: ‘Rancho’, cursive;
+    font-size: 25px;
 }
 #orderBtn{
     /*position: absolute;*/
@@ -65,4 +67,10 @@ td, th {
     height: 70%;
     /*right: 0%;*/
     /*bottom: 0;*/
+}
+label{
+    font-family: ‘Rancho’, cursive;
+}
+p{
+    font-family: ‘Rancho’, cursive;
 }
