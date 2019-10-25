@@ -114,3 +114,5 @@ tbody.innerHTML = renderCoffees(coffees);
 
 
 submitButton.addEventListener('click', updateCoffees);
+
+var order = coffeeName.value;

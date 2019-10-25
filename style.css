@@ -32,3 +32,37 @@ td, th {
 .end{
     margin-bottom: 20%;
 }
+.cup{
+    z-index: -1;
+}
+
+#orderRoast{
+    position: absolute;
+    top: 55%;
+    left: 37%;
+    z-index: 1;
+    height: 25%;
+    width: 25%;
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 5px black;
+    border-radius: 10px;
+}
+.card-title{
+    /*font-weight: bold;*/
+
+}
+
+.tab{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+#orderBtn{
+    /*position: absolute;*/
+    width: 30%;
+    height: 70%;
+    /*right: 0%;*/
+    /*bottom: 0;*/
+}

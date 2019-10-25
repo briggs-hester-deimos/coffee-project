@@ -28,13 +28,13 @@
 <div class="container">
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab"
+            <a class="nav-item nav-link active tab" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab"
                aria-controls="nav-all" aria-selected="true">All</a>
-            <a class="nav-item nav-link" id="nav-light-tab" data-toggle="tab" href="#nav-light" role="tab"
+            <a class="nav-item nav-link tab" id="nav-light-tab" data-toggle="tab" href="#nav-light" role="tab"
                aria-controls="nav-light" aria-selected="false">Light</a>
-            <a class="nav-item nav-link" id="nav-medium-tab" data-toggle="tab" href="#nav-medium" role="tab"
+            <a class="nav-item nav-link tab" id="nav-medium-tab" data-toggle="tab" href="#nav-medium" role="tab"
                aria-controls="nav-medium" aria-selected="false">Medium</a>
-            <a class="nav-item nav-link" id="nav-dark-tab" data-toggle="tab" href="#nav-dark" role="tab"
+            <a class="nav-item nav-link tab" id="nav-dark-tab" data-toggle="tab" href="#nav-dark" role="tab"
                aria-controls="nav-dark" aria-selected="false">Dark</a>
         </div>
     </nav>
@@ -67,7 +67,7 @@
             <label for="coffeeName">Coffee Name</label>
             <input class="form-control predictive-text" id="coffeeName">
         </div>
-        <button type="submit" class="btn btn-primary submit-button" id="submit">Submit</button>
+<!--        <button type="submit" class="btn btn-primary submit-button" id="submit">Submit</button>-->
     </form>
     <!--    end first coffee submission box-->
 
@@ -96,7 +96,8 @@
                 <div class="card" style="top: 10%;">
                     <div class="card-body">
                         <div>
-                            <img src="img/coffe.png" class="img-fluid" alt="Responsive image" class="cup">
+                            <img src="img/coffe.png" class="img-fluid cup" alt="Responsive image">
+                            <div ><img src="img/mediumRoast.png" alt="" id="orderRoast"></div>
                         </div>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Total: </h5>
                         <p class="card-text">Itemized purchased list</p>
-                        <a href="#" class="btn btn-primary">Submit order</a>
+                        <a href="#" ><img src="img/orderButton.png" alt="" id="orderBtn" class="img-fluid"></a>
                     </div>
                 </div>
             </div>
