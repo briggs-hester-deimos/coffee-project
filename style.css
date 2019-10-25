@@ -50,7 +50,7 @@ td, th {
     border-radius: 10px;
 }
 .card-title{
-    font-family: ‘Rancho’, cursive;
+    font-family: 'Crete Round', serif;
 
 }
 
@@ -58,7 +58,7 @@ td, th {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-family: ‘Rancho’, cursive;
+    font-family: 'Crete Round', serif;
     font-size: 25px;
 }
 #orderBtn{
@@ -72,8 +72,8 @@ td, th {
 
 }
 label{
-    font-family: ‘Rancho’, cursive;
+    font-family: 'Crete Round', serif;
 }
 p{
-    font-family: ‘Rancho’, cursive;
+    font-family: 'Crete Round', serif;
 }

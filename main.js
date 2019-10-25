@@ -79,7 +79,12 @@ function chooseCoffee(){
     }
 }
 document.getElementById("coffeeName").addEventListener("keyup", chooseCoffee);
-
+document.getElementById("nav-all-tab").addEventListener("click", function(event){
+    console.log("in all click");
+    dbody.innerHTML = "";
+    mbody.innerHTML = "";
+    lbody.innerHTML = "";
+});
 document.getElementById("nav-light-tab").addEventListener("click", function(event){
     console.log("in light click");
     lbody.innerHTML = updateCoffeesTabs(event, "light");
