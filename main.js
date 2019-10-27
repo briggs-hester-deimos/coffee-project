@@ -84,24 +84,28 @@ document.getElementById("nav-all-tab").addEventListener("click", function(event)
     dbody.innerHTML = "";
     mbody.innerHTML = "";
     lbody.innerHTML = "";
+    document.getElementById("orderRoast").className = "";
 });
 document.getElementById("nav-light-tab").addEventListener("click", function(event){
     console.log("in light click");
     lbody.innerHTML = updateCoffeesTabs(event, "light");
     mbody.innerHTML = "";
     dbody.innerHTML = "";
+    document.getElementById("orderRoast").className = "light";
 });
 document.getElementById("nav-medium-tab").addEventListener("click", function(event){
     console.log("in medium click");
+    mbody.innerHTML = updateCoffeesTabs(event, "medium");
     lbody.innerHTML = "";
     dbody.innerHTML = "";
-    mbody.innerHTML = updateCoffeesTabs(event, "medium");
+    document.getElementById("orderRoast").className = "medium";
 });
 document.getElementById("nav-dark-tab").addEventListener("click", function(event){
     console.log("in dark click");
     dbody.innerHTML = updateCoffeesTabs(event, "dark");
     mbody.innerHTML = "";
     lbody.innerHTML = "";
+    document.getElementById("orderRoast").className = "dark";
 });
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -121,3 +125,4 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 
 var order = coffeeName.value;
+
