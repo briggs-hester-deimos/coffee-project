@@ -96,9 +96,15 @@
             <div class="col-sm-6">
                 <div class="card" style="top: 10%;">
                     <div class="card-body">
-                        <h5 class="card-title">Total: </h5>
-                        <p class="card-text">Itemized purchased list</p>
-                        <a href="#" ><img src="img/orderButton.png" alt="" id="orderBtn" class="img-fluid"></a>
+                        <div class=“form-group”>
+                            <label for=“exampleFormControlSelect1">Choose Size</label>
+                            <select class=“form-control” id=“exampleFormControlSelect1">
+                                <option>Tall</option>
+                                <option>Grande</option>
+                                <option>Venti</option>
+                            </select>
+                        </div>
+                        <a href="#" onclick="thankYou()"><img src="img/orderButton.png" alt="" id="orderBtn" class="img-fluid"></a>
                     </div>
                 </div>
             </div>

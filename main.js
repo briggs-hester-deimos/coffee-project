@@ -126,3 +126,11 @@ submitButton.addEventListener('click', updateCoffees);
 
 var order = coffeeName.value;
 
+
+function thankYou() {
+    var snd = new Audio("smw_coin.wav");
+    snd.onended = function () {alert('Thank you for your purchase!')};
+    snd.play();
+
+}
+
